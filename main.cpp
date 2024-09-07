@@ -29,6 +29,7 @@ int main() {
 	cout << "3. CPU Info \n";
 	cout << "4. YOUR COMMAND \n";
 	cout << "5. Download mirrorlist (Arch Linux) \n";
+	cout << "6. Print Wi-Fi networks (nmcli) \n";
 	cout << "99. Info \n";
 	cout << " \n";
 	cout << "Enter tool's number: ";
@@ -85,7 +86,7 @@ int main() {
 		printf(" \n");
 	}
        
-	if (number > 4) {
+	if (number > 6) {
 		printf(" \n");
 		printf("\033[31mWrong number!\n");
 		printf("\033[0m\n");
@@ -97,6 +98,12 @@ int main() {
 		printf("*Linux Command is 'INSERT COMMAND HERE'");
 		printf(" \n");
 
+	}
+
+	if (number == 6) {
+		system("nmcli device wifi list");
+		printf(" \n");
+		printf("Linux Command is 'nmcli device wifi list'");
 	}
 
 	if (number == 5) {
